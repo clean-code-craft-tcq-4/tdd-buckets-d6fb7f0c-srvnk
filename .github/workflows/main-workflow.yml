@@ -26,4 +26,4 @@ jobs:
         dotnet-version: 3.1.101
 
     - name: Run tests and collect coverage
-      run: dotnet test --collect:"XPlat Code Coverage"
+      run: dotnet Range --collect:"XPlat Code Coverage"
