@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,7 +6,7 @@ namespace Range
 {
     public class RangeMethods
     {
-        public static int[] SequenceGenerator(int min, int max)
+        public static int[] GenerateSequence(int min, int max)
         {
             int[] intarray = new int[max - min + 1];
             int index = 0;
@@ -18,9 +18,9 @@ namespace Range
             return intarray;
         }
 
-        public static int[] convertToArray(List<ValueToAmpsModel> convertedValues)
+        public static int[] convertToArray(List<ConverterModel> convertedValues)
         {
-            return convertedValues.Where(x => x.ErrorValue != 1).Select(x => Convert.ToInt32(x.ValueToAmps)).ToArray();
+            return convertedValues.Where(x => x.Error != 1).Select(x => Convert.ToInt32(x.AmpValue)).ToArray();
         }
     }
 }
